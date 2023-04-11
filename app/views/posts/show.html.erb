@@ -1,0 +1,11 @@
+<h1><%= link_to "The Clubhouse", root_path %></h1>
+
+<h3><%= @post.title %></h3>
+<h6>By:
+  <% if user_signed_in? %>
+    <%= @post.user.email %>
+  <% else %>
+    Anonymous
+  <% end %>
+</h6>
+<p><%= @post.body %></p>
